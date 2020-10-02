@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container{
+display:flex;
+flex-direction:row;
+justify-content: center;
+}
+.boys-container{
+  display: flex;
+  margin:5px;
+  text-align: center;
+}
+.boys-names{
+ display: column;
+ justify-content: center;
+
+}
+.girls-names{
+ display: column;
+ justify-content: center;
+}
+.girls-container{
+  display: flex;
+  margin:5px;
+  text-align: center;
+}
+.boys-p{
+  display: flex;
+  background-color: rgb(27, 113, 189);
+  border:1px solid;
+  padding:2px;
+  margin:3px;
+  border-radius: 5%;
+ 
+ 
+  text-align: center;
+
+}
+
+.girls-p{
+  display: flex;
+  background-color: rgb(231, 116, 241);
+  border:1px solid;
+  padding:2px;
+  margin:3px;
+  border-radius: 5%;
+  text-align: center;
+
+}
+h1{
+  margin:3px;
+}
