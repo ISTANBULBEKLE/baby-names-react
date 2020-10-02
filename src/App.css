@@ -37,6 +37,10 @@
   }
 }
 
+.main-p{
+  font-size: x-large;
+  font-weight: bolder;
+}
 .main-container{
 display:flex;
 flex-direction:row;
@@ -50,11 +54,12 @@ justify-content: center;
 .boys-names{
  display: column;
  justify-content: center;
-
+text-align: center;
 }
 .girls-names{
  display: column;
  justify-content: center;
+ text-align: center;
 }
 .girls-container{
   display: flex;
@@ -68,8 +73,6 @@ justify-content: center;
   padding:2px;
   margin:3px;
   border-radius: 5%;
- 
- 
   text-align: center;
 
 }

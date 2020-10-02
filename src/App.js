@@ -6,9 +6,8 @@ function App() {
   return (
     <div className="App">
       <div>
-        <span>Boys</span>
-        <span>Girls</span>
-        <Names/>
+        <p className="main-p">List of Girls and Boys Babies</p>
+        <Names />
       </div>
     </div>
   );

@@ -2,12 +2,12 @@ import React from "react";
 import BabyNames from "./BabyNames.json";
 
 const Names = () => {
-  const newArr = BabyNames.sort((a, b) => (a === b ? 0 : a < b ? -1 : 1));
+  //  const newArr = BabyNames.sort((a, b) => (a === b ? 0 : a < b ? -1 : 1));
   const boysArr = BabyNames.filter((b) => b.sex === "m").sort((a, b) =>
-    a === b ? 0 : a < b ? -1 : 1
+    a.name === b.name ? 0 : a.name < b.name ? -1 : 1
   );
   const girlsArr = BabyNames.filter((g) => g.sex === "f").sort((a, b) =>
-    a === b ? 0 : a < b ? -1 : 1
+    a.name === b.name ? 0 : a.name < b.name ? -1 : 1
   );
 
   return (
