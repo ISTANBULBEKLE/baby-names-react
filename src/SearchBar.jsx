@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import BabyNames from "./BabyNames.json";
 
-const SearchBar = () => {
+const SearchBar = ({ handleFilter }) => {
   const [inputValue, setInputValue] = useState("");
 
   function handleSearch(e) {
-    setInputValue(
-      BabyNames.filter(function (name) {
-        return name.name.toLowerCase().includes(e.target.value);
-      })
-    );
-    setInputValue("");
+    setInputValue();
+    handleFilter(e.target.value.toLowerCase());
   }
 
   return (

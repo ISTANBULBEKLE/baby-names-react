@@ -38,13 +38,20 @@
 }
 
 .pink-class{
-  background-color: pink;
+  background-color: rgb(241, 205, 211);
 }
 .blue-class{
-  background-color: #0f70ee;
+  background-color: #95bcee;
 }
 button{
   align-items: center;
   margin:4px;
   padding:2px;
+  border-radius: 10%;
+  border-color: #373a3f;
+  font-weight: bolder;
+}
+.main-p{
+   font-weight: bolder;
+   font-size: 2rem;
 }
