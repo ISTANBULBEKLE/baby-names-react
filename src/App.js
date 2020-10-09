@@ -19,7 +19,9 @@ function App() {
     <div className="App">
       <div>
         <p className="main-p">List of Baby Girls and Boys</p>
+        <hr></hr>
         <SearchBar handleFilter={handleFilter} />
+        <hr></hr>
         <Names babyNames={babyNames} />
       </div>
     </div>
