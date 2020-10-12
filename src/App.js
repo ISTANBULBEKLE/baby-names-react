@@ -3,6 +3,7 @@ import "./App.css";
 import Names from "./Names";
 import SearchBar from "./SearchBar";
 import BabyNames from "./BabyNames.json";
+import Favorites from "./Favorites";
 
 function App() {
   const [babyNames, setBabyNames] = useState(BabyNames);
@@ -21,6 +22,8 @@ function App() {
         <p className="main-p">List of Baby Girls and Boys</p>
         <hr></hr>
         <SearchBar handleFilter={handleFilter} />
+        <hr></hr>
+        <Favorites babyNames={babyNames} />
         <hr></hr>
         <Names babyNames={babyNames} />
       </div>
