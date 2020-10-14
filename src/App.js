@@ -6,13 +6,30 @@ import BabyNames from "./BabyNames.json";
 import Favorites from "./Favorites";
 
 function App() {
+ 
   const orderedArr = BabyNames.sort((a, b) =>
     a.name < b.name ? -1 : a.name > b.name ? 1 : 0
   );
 
+
   const [babyNames, setBabyNames] = useState(orderedArr);
 
-  function handleFilter(input) {
+  
+
+  const [favorites, setFavorites] = useState([]);
+
+  function handleSetFavorites(nameId) {
+    setFavorites([...favorites, orderedArr.find((n)=>n.name === nameId) ]);
+    setBabyNames(babyNames.filter(n => n.name !==nameId))
+  }
+
+
+  function handleReverseNames(itemName) {
+    setBabyNames([...babyNames, orderedArr.find((n)=>n.name === itemName) ]);
+    setFavorites(favorites.filter(n => n.name !== itemName));
+  }
+ 
+function handleFilter(input) {
     setBabyNames(
       orderedArr.filter((babyName) =>
         babyName.name.toLowerCase().includes(input)
@@ -20,18 +37,6 @@ function App() {
     );
   }
 
-  const [favorites, setFavorites] = useState([]);
-
-  function handleSetFavorites(nameId) {
-   setFavorites([...favorites, orderedArr.find((n)=>n.name === nameId) ]);
-  setBabyNames(babyNames.filter(n => n.name !==nameId))
-  }
-
-
-  function handleReverseNames(itemName) {
-   setBabyNames([...babyNames, orderedArr.find((n)=>n.name === itemName) ]);
-  setFavorites(favorites.filter(n => n.name !== itemName));
-  }
   return (
     <div className="App">
       <div>

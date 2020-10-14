@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Names = ({ babyNames, handleSetFavorites }) => {
   const orderedArr = babyNames.sort((a, b) =>
@@ -7,9 +7,9 @@ const Names = ({ babyNames, handleSetFavorites }) => {
 
   function handleListInToFavorites(e){
     const nameId = e.target.innerText;
-    console.log(nameId);
     handleSetFavorites(nameId);
   }
+
   return (
     <div className="name-container">
       {orderedArr.map((name) => (
