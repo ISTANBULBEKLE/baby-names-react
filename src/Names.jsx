@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 
-const Names = ({ babyNames }) => {
+const Names = ({ babyNames, handleSetFavorites }) => {
   const orderedArr = babyNames.sort((a, b) =>
     a.name < b.name ? -1 : a.name > b.name ? 1 : 0
   );
-  const [favorites, setFavorites] = useState([]);
 
-  function handleClick(e) {
-    console.log("button clicked," + e.target.value);
-    setFavorites((prevNames)=>[...prevNames, e.target.value]);
+  function handleListInToFavorites(e){
+    const nameId = e.target.innerText;
+    console.log(nameId);
+    handleSetFavorites(nameId);
   }
-
   return (
     <div className="name-container">
       {orderedArr.map((name) => (
         <button
-          onClick={handleClick}
-          value={favorites}
+          onClick={handleListInToFavorites}
+          //value={favorites}
           key={name.id}
           className={name.sex === "f" ? "pink-class" : "blue-class"}
         >

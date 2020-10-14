@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Favorites = ({ babyNames }) => {
+const Favorites = ({ babyNames, handleReverseNames }) => {
+  const orderedArr = babyNames.sort((a, b) =>
+    a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+  );
+
+  function handleReverseFavorite (e){
+    const itemName = e.target.innerText;
+    handleReverseNames(itemName);
+  }
+
   return (
     <div className="favorites">
       <p>My favorite names</p>
-      <button className="favorite-buttons btn btn-info"></button>
+      {orderedArr.map((n) => (
+        <button
+          onClick={handleReverseFavorite}
+          className={n.sex === "f" ? "pink-class" : "blue-class"}
+        >
+          {n.name}
+        </button>
+      ))}
     </div>
   );
 };
