@@ -11,10 +11,7 @@ function App() {
     a.name < b.name ? -1 : a.name > b.name ? 1 : 0
   );
 
-
   const [babyNames, setBabyNames] = useState(orderedArr);
-
-  
 
   const [favorites, setFavorites] = useState([]);
 
@@ -22,7 +19,6 @@ function App() {
     setFavorites([...favorites, orderedArr.find((n)=>n.name === nameId) ]);
     setBabyNames(babyNames.filter(n => n.name !==nameId))
   }
-
 
   function handleReverseNames(itemName) {
     setBabyNames([...babyNames, orderedArr.find((n)=>n.name === itemName) ]);

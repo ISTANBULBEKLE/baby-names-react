@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const SearchBar = ({ handleFilter }) => {
+  
   const [inputValue, setInputValue] = useState("");
 
   function handleSearch(e) {
