@@ -13,8 +13,8 @@ const Favorites = ({ babyNames, handleReverseNames }) => {
   return (
     <div className="favorites">
       <p>My favorite names. </p>
+       <span>Pick your names from the below list!</span>
       <hr></hr>
-      <span>Pick your names from the below list!</span>
       <br></br>
       {orderedArr.map((n) => (
         <button

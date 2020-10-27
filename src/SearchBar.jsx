@@ -12,10 +12,11 @@ const SearchBar = ({ handleFilter }) => {
   return (
     <div>
       <input
+        size='30'
         value={inputValue}
         onChange={handleSearch}
         type="text"
-        placeholder="search for baby name"
+        placeholder="SEARCH FOR BABY NAMES"
       />
     </div>
   );

@@ -17,7 +17,7 @@ function App() {
 
   function handleSetFavorites(nameId) {
     setFavorites([...favorites, orderedArr.find((n)=>n.name === nameId) ]);
-    setBabyNames(babyNames.filter(n => n.name !==nameId))
+    setBabyNames(babyNames.filter(n => n.name !==nameId));
   }
 
   function handleReverseNames(itemName) {
