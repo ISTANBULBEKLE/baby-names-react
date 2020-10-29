@@ -15,7 +15,6 @@ const Favorites = ({ babyNames, handleReverseNames }) => {
       <p>My favorite names. </p>
        <span>Pick your names from the below list!</span>
       <hr></hr>
-      <br></br>
       {orderedArr.map((n) => (
         <button
           onClick={handleReverseFavorite}
